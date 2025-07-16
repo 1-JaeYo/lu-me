@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.mb-8 {
+  padding-left: 3rem;
+}
+
+
+/* Main Content Layout */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.text-gray-600 {
+  color: black;
+}
+
+.text-2xl {
+  font-size: 2rem;
+  margin-top: 3rem;
+}

@@ -1,0 +1,178 @@
+/* .login-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #8b5cf6, #3b82f6, #10b981);
+  padding: 1rem;
+}
+.login-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 20rem;
+  width: 100%;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.login-header {
+  margin-bottom: 1.5rem;
+}
+.login-icon {
+  background: linear-gradient(to right, #10b981, #3b82f6);
+  padding: 0.5rem;
+  border-radius: 9999px;
+  color: white;
+}
+.login-header h1 {
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+.login-header p {
+  color: #6b7280;
+}
+.login-btn {
+  background: #10b981;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.login-btn:hover {
+  background: #059669;
+} */
+
+
+/* 1) Define your shared design tokens at the top */
+:root {
+  /* --color-primary: #1ED760;
+  --color-secondary: #FF8C42;
+  --color-login-gradient-start: #8B5CF6; 
+  --color-login-gradient-mid: #3B82F6;
+  --color-login-gradient-end: #10B981;
+  --color-text-muted: #6B7280;
+  --color-bg-card: #FFFFFF; */
+  --radius-base: 0.75rem;
+  --shadow-base: 0 10px 15px rgba(0,0,0,0.1);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* 2) Ensure your HTML or body uses the body font */
+body {
+  font-family: var(--font-body);
+  background: var(--color-login-gradient-start); /* fallback */
+}
+
+/* 3) The full‐screen gradient background */
+.login-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-login-gradient-start),
+    var(--color-login-gradient-mid),
+    var(--color-login-gradient-end)
+  );
+  padding: 1rem;
+  --color-primary: #1ED760;       /* Spotify‐style green */
+  --color-secondary: #FF8C42;     /* Warm accent */
+  --color-login-gradient-start: #8B5CF6; 
+  --color-login-gradient-mid: #3B82F6;   /* Blue */
+  --color-login-gradient-end: #10B981;   /* Green (primary) */
+  --color-text-muted: #6B7280;    /* Gray for subtext */
+  --color-bg-card: #FFFFFF;       /* White card background */
+  --radius-base: 0.75rem;         /* Consistent roundness */
+  --shadow-base: 0 10px 15px rgba(0,0,0,0.1);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* 4) The card in the center */
+.login-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-base);
+  padding: 2rem;
+  max-width: 20rem;
+  width: 100%;
+  box-shadow: var(--shadow-base);
+  text-align: center;
+  /* Use the body font inside the card by default */
+  font-family: var(--font-body);
+}
+
+/* 5) Header wrapper (icon + heading + subtext) */
+.login-header {
+  margin-bottom: 1.5rem;
+}
+
+/* 5a) Circular icon background with gradient */
+.login-icon {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  padding: 0.5rem;
+  border-radius: 9999px; /* fully rounded */
+  color: white;
+  display: inline-flex;
+}
+
+/* 5b) Main heading uses the heading font */
+.login-header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+  color: #111; /* dark text */
+}
+
+/* 5c) Subheading / description text */
+.login-header p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 6) Primary button styling */
+.login-btn {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--radius-base);
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* 6a) Hover/active feedback */
+.login-btn:hover {
+  background: #059669; /* darker shade of primary */
+  transform: translateY(-1px);
+}
+.login-btn:active {
+  background: #047f5b; /* even darker */
+  transform: translateY(0);
+}
+
+/* 7) Ensure no unexpected margin on form elements */
+.login-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.3);
+}
