@@ -2,7 +2,7 @@ import React from 'react';
 import { Music } from 'lucide-react';
 import '../styles/LoginScreen.css';
 
-export default function LoginScreen({ onSpotifyLogin }) {
+export default function LoginScreen() {
   const handleLogin = () => {
     // Redirect browser to your backend’s /api/auth/login
     window.location.href = `${process.env.REACT_APP_API_URL}/api/auth/login`;
