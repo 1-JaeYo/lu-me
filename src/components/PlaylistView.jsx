@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Pause, Heart, Plus, Share2 } from 'lucide-react';
+import { Play, Heart, Plus, Share2 } from 'lucide-react';
 import '../styles/PlaylistView.css';
 
 export default function PlaylistView({
