@@ -1,0 +1,88 @@
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border: 1px solid #f3f4f6;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  margin: 3rem;
+  width: 25%;
+}
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem; 
+  justify-content: flex-start;
+}
+
+.cover-container {
+  position: relative;
+  cursor: pointer;
+}
+.cover-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0);
+  transition: background 0.2s;
+}
+.cover-container:hover .overlay {
+  background: rgba(0,0,0,0.3);
+}
+
+.content {
+  padding: 1rem;
+}
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 2; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.meta {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-actions {
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.btn.like:hover { color: #ef4444; }
+.btn.comment:hover { color: #3b82f6; }
+.btn.share:hover { color: #374151; }
