@@ -5,7 +5,9 @@ import '../styles/LoginScreen.css';
 export default function LoginScreen() {
   const handleLogin = () => {
     // Redirect browser to your backend’s /api/auth/login
-    window.location.href = `${process.env.REACT_APP_API_URL}/api/auth/login`;
+    const target = `${process.env.REACT_APP_API_URL}/api/auth/login`;
+    console.log('redirecting to:', target);
+    window.location.href = target
   };
   return (
     <div className="login-bg">
