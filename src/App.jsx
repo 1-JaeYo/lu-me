@@ -71,7 +71,7 @@ function App() {
   const importPlaylists = () => {
     const token = localStorage.getItem('ms_token');
     axios.get(
-      `${process.env.REACT_APP_API_URL}/api/playlists/import`,
+      `${process.env.REACT_APP_API_URL}api/playlists/import`,
       { headers: { Authorization: `Bearer ${token}` } }
     )
     .then(res => {
@@ -86,7 +86,7 @@ function App() {
   };
 
   const handleSpotifyLogin = () => {
-    window.location.href = `${process.env.REACT_APP_API_URL}/api/auth/login`;
+    window.location.href = `${process.env.REACT_APP_API_URL}api/auth/login`;
   };
 
   const handlePlayPause = track => {
@@ -122,7 +122,7 @@ function App() {
 
     // load comments for that playlist
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/comments/${playlist._id}`)
+      .get(`${process.env.REACT_APP_API_URL}api/comments/${playlist._id}`)
       .then(res => setComments(res.data))
       .catch(console.error);
   };
@@ -152,7 +152,7 @@ function App() {
     try {
       // Tell our backend to clear tokens
       await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/auth/logout`,
+        `${process.env.REACT_APP_API_URL}api/auth/logout`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -174,7 +174,7 @@ function App() {
   const handleSongOfTheDay = () => {
     const token = localStorage.getItem('ms_token');
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/playlists/song-of-the-day`, {
+      .get(`${process.env.REACT_APP_API_URL}api/playlists/song-of-the-day`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(res => {
@@ -199,7 +199,7 @@ function App() {
     try {
       const token = localStorage.getItem('ms_token');
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/playlists/${playlistId}/like`,
+        `${process.env.REACT_APP_API_URL}api/playlists/${playlistId}/like`,
         {}, // empty body
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -219,7 +219,7 @@ function App() {
     try {
       const token = localStorage.getItem('ms_token');
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/comments/${playlistId}`,
+        `${process.env.REACT_APP_API_URL}api/comments/${playlistId}`,
         { text },
         { headers: { Authorization: `Bearer ${token}` } }
       );
