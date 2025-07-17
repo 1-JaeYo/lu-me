@@ -34,7 +34,7 @@ function App() {
     }
     const savedToken = localStorage.getItem('ms_token');
     if (savedToken) {
-      axios.get(`${process.env.REACT_APP_API_URL}/api/users/me`, {
+      axios.get(`${process.env.REACT_APP_API_URL}api/users/me`, {
         headers: { Authorization: `Bearer ${savedToken}` }
       })
       .then(res => {
