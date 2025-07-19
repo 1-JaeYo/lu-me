@@ -34,7 +34,7 @@ export default function Navigation({
       <nav className="nav-bar">
         {/* Left: Logo & Title */}
         <div className="nav-left">
-          <img src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" className="login-logo"/>
+          <img src={process.env.PUBLIC_URL + '/logo 2.png'} alt="logo" className="login-logo"/>
           <span className="nav-title">Lu&amp;Me</span>
         </div>
 
