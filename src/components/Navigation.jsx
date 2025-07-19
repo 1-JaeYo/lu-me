@@ -34,7 +34,7 @@ export default function Navigation({
       <nav className="nav-bar">
         {/* Left: Logo & Title */}
         <div className="nav-left">
-          <Music size={24} className="nav-logo" />
+          <img src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" className="login-logo"/>
           <span className="nav-title">Lu&amp;Me</span>
         </div>
 
