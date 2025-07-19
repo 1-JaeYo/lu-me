@@ -103,6 +103,8 @@
 .nav-username {
   font-weight: 600;
   margin: 0;
+  margin-left: 5px;
+  margin-top: 6px;
 }
 
 /* PROFILE DROPDOWN */
