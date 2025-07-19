@@ -2,7 +2,7 @@ import React from 'react';
 import { Music } from 'lucide-react';
 import '../styles/LoginScreen.css';
 
-export default function LoginScreen() {
+export default function LoginScreen({ onSpotifyLogin }) {
   return (
     <div className="login-bg">
       <div className="login-card">
