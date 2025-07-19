@@ -77,7 +77,7 @@ function App() {
     .then(res => {
       console.log('Imported playlists:', res.data.playlists);
       setPlaylists(res.data.playlists);
-      setPlaylistsImported(true); // ← new: hide button after import
+      setPlaylistsImported(true); // hide button after import
     })
     .catch(err => {
       console.error('Failed to import playlists:', err);
