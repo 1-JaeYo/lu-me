@@ -263,7 +263,7 @@ function App() {
             {!playlistsImported && (
               <button
                 onClick={importPlaylists}
-                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mb-6"
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mb-6 impplay"
               >
                 Import Your Playlists
               </button>
