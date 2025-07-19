@@ -93,8 +93,8 @@
 }
 
 .nav-avatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.1rem;
+  height: 2.1rem;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--color-primary);
