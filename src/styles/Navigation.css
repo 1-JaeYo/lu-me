@@ -184,3 +184,8 @@
   background: var(--color-accent);
   color: var(--color-primary);
 }
+
+.login-logo {
+  width: 24px;
+  height: 24px;
+}
