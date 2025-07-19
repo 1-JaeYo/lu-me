@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Music, Search, Home, Calendar, Settings, X } from 'lucide-react';
+import { Search, Home, Calendar, Settings, X } from 'lucide-react';
 import '../styles/Navigation.css';
 import SearchBar from './SearchBar';
 
