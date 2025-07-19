@@ -190,3 +190,8 @@
   width: 30px;
   height: 30px;
 }
+
+.gap-2 {
+  display: flex;
+  width: fit-content;
+}
