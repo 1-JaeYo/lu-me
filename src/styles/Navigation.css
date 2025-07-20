@@ -197,3 +197,26 @@
   display: flex;
   width: fit-content;
 }
+
+/* Make all text inside the settings modal use the --text variable (which is #eee in dark) */
+.settings-modal {
+  color: var(--text);
+}
+
+/* And force white text when the root <html> has .dark */
+.dark .settings-modal {
+  color: #fff;
+}
+
+/* If you have buttons/links inside it, you can target them too: */
+.dark .settings-modal button,
+.dark .settings-modal a,
+.dark .settings-modal input,
+.dark .settings-modal label {
+  color: #fff;
+}
+
+.dark .settings-modal {
+  color: white !important;
+}
+
